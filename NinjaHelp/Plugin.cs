@@ -1,22 +1,22 @@
-﻿using Dalamud.Game.Command;
+using Dalamud.Game.Command;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using System.IO;
 using System.Reflection;
 using Dalamud.Interface.Windowing;
-using SamplePlugin.Windows;
+using NinjaHelp.Windows;
 
-namespace SamplePlugin
+namespace NinjaHelp
 {
     public sealed class Plugin : IDalamudPlugin
     {
-        public string Name => "Sample Plugin";
-        private const string CommandName = "/pmycommand";
+        public string Name => "Ninja Helper";
+        private const string CommandName = "/ninhelp";
 
         private DalamudPluginInterface PluginInterface { get; init; }
         private CommandManager CommandManager { get; init; }
         public Configuration Configuration { get; init; }
-        public WindowSystem WindowSystem = new("SamplePlugin");
+        public WindowSystem WindowSystem = new("NinjaHelp");
 
         public Plugin(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
